@@ -1,4 +1,4 @@
-﻿using easyar;
+using easyar;
 using UnityEngine;
 using VideoPlayer = UnityEngine.Video.VideoPlayer;
 
@@ -33,7 +33,11 @@ public class ShowVideoManager : MonoBehaviour
     {
         print("OnTargetFound");
 
-        if (string.IsNullOrEmpty(videoPlayer.url))
+        if (pauseOnLost && !string.IsNullOrEmpty(videoPlayer.url))
+        {
+            videoPlayer.Play();
+        }
+        else if (string.IsNullOrEmpty(videoPlayer.url))
         {
             videoPlayer.Play();
         }
