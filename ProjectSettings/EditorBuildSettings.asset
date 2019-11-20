@@ -5,25 +5,25 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/_project/scenes/main.unity
     guid: 461daf089a9f9444da8e683edf44b661
-  - enabled: 1
+  - enabled: 0
     path: Assets/_project/scenes/image_target_multi_with_3d.unity
     guid: f24aa71689f6a437b80d79876b08d5cc
-  - enabled: 1
+  - enabled: 0
     path: Assets/_project/scenes/image_target_multi_with_3d_colliders.unity
     guid: 7a411b9e3dd2e4faaae6a3e332f14631
   - enabled: 1
     path: Assets/_project/scenes/image_target_with_3d.unity
     guid: 6fc051835a71040f5ba5845582685009
-  - enabled: 1
+  - enabled: 0
     path: Assets/_project/scenes/image_target_with_3d_ui.unity
     guid: 2c774cff3997f4ec4bf5cb965461441e
-  - enabled: 1
+  - enabled: 0
     path: Assets/_project/scenes/image_target_with_video.unity
     guid: 637145d20e0b84a8b9181af218de0493
-  - enabled: 1
+  - enabled: 0
     path: Assets/_project/scenes/image_target_with_video_loading.unity
     guid: bba7f23b382c7456a967e378c8c3b1d1
   m_configObjects: {}

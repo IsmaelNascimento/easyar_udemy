@@ -71,9 +71,9 @@ public class BufferVideoAR : MonoBehaviour
 
     // COROUTINES
 
-    private IEnumerator GetVideo_Coroutine(string ulrVideo)
+    private IEnumerator GetVideo_Coroutine(string urlVideo)
     {
-        string nameVideo = ulrVideo.Split('/')[ulrVideo.Split('/').Length - 1];
+        string nameVideo = urlVideo.Split('/')[urlVideo.Split('/').Length - 1];
         string pathVideo = Path.Combine(GetPathVideos(), nameVideo);
 
         if (IsVideoOnBuffer(pathVideo))
@@ -83,14 +83,14 @@ public class BufferVideoAR : MonoBehaviour
         }
         else
         {
-            Debug.Log("Start get video");
-            using (UnityWebRequest webRequest = UnityWebRequest.Get(ulrVideo))
+            Debug.Log("Start get video:: " + urlVideo);
+            using (UnityWebRequest webRequest = UnityWebRequest.Get(urlVideo))
             {
                 yield return webRequest.SendWebRequest();
 
                 if (webRequest.isNetworkError)
                 {
-                    Debug.LogError("GetVideo_Coroutine:: " + webRequest.error);
+                    //Debug.LogError("GetVideo_Coroutine:: " + webRequest.error);
                     OnGetVideo?.Invoke(true, webRequest.error);
                 }
                 else
